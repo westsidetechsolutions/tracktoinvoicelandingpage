@@ -1,0 +1,130 @@
+.header {
+  position: fixed; /* Sticky header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent; /* Start transparent */
+  padding: 1rem 0;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.header.scrolled {
+  background-color: var(--color-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700; /* Bold */
+  color: var(--color-neutral);
+  transition: color 0.2s ease;
+}
+
+.header.scrolled .logoText {
+    /* Optional: change logo color on scroll if needed */
+}
+
+/* Desktop Navigation */
+.navDesktop {
+  display: none; /* Hidden on mobile by default */
+  align-items: center;
+  gap: 1.5rem; /* Spacing between links */
+}
+
+.navLink {
+  color: var(--color-secondary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  padding: 0.5rem 0; /* Add some vertical padding for easier clicking */
+  position: relative; /* For potential underline effect */
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+  text-decoration: none; /* Remove default underline */
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+
+/* Mobile Navigation */
+.mobileNavToggle {
+  display: block; /* Visible on mobile */
+  background: none;
+  border: none;
+  color: var(--color-neutral);
+  font-size: 1.5rem; /* Adjust icon size */
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1010; /* Ensure it's above mobile menu */
+}
+
+.navMobile {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* Position below the header */
+  left: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.navLinkMobile {
+  color: var(--color-neutral);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem; /* Use container padding */
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.2s ease;
+}
+.navLinkMobile:last-child {
+    border-bottom: none;
+}
+
+.navLinkMobile:hover {
+  background-color: var(--color-base-bg);
+  color: var(--color-primary);
+}
+
+/* Medium screens and up (tablets, desktops) */
+@media (min-width: 768px) {
+  .navDesktop {
+    display: flex; /* Show desktop nav */
+  }
+  .mobileNavToggle {
+    display: none; /* Hide mobile toggle */
+  }
+  .navMobile {
+    display: none; /* Hide mobile menu */
+  }
+}

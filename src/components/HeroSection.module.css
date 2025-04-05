@@ -1,0 +1,134 @@
+.heroSection {
+  background-color: var(--color-base-bg);
+  padding-top: 8rem; /* Extra padding top to account for fixed header */
+  padding-bottom: 4rem; /* Adjust as needed */
+  overflow: hidden; /* Contain animations */
+  width: 100%; /* Ensure full width */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 3rem; /* Space between text and image */
+  align-items: center;
+  width: 100%; /* Ensure container takes full width */
+  max-width: 100%; /* Prevent overflow */
+}
+
+.contentWrapper {
+  text-align: center; /* Center text on mobile */
+  width: 100%; /* Ensure full width */
+  max-width: 100%; /* Prevent overflow */
+}
+
+.headline {
+  font-size: 2.5rem; /* Mobile headline size */
+  line-height: 1.2;
+  color: var(--color-neutral);
+  margin-bottom: 1rem;
+  font-weight: 700; /* Bolder for hero */
+  word-wrap: break-word; /* Allow text to wrap */
+  overflow-wrap: break-word; /* Modern browsers */
+}
+
+.subheadline {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  max-width: 600px; /* Limit width for readability */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  width: 100%; /* Ensure full width */
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem; /* Space between button and subtext */
+  width: 100%; /* Ensure full width */
+}
+
+.ctaButton {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.8rem 2rem; /* Slightly larger button */
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); /* Subtle blue shadow */
+  /* Framer Motion handles hover/tap */
+  white-space: normal; /* Allow text to wrap */
+  width: auto; /* Auto width */
+  max-width: 100%; /* Prevent overflow */
+}
+
+.ctaSubtext {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  margin: 0;
+  width: 100%; /* Ensure full width */
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center; /* Center image on mobile */
+  width: 100%; /* Ensure full width */
+}
+
+.heroImage {
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto;
+  width: auto; /* Allow natural width */
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+  .heroSection {
+    padding-top: 10rem; /* More padding on larger screens */
+    padding-bottom: 6rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 4rem;
+    text-align: left; /* Align text left */
+  }
+
+  .contentWrapper {
+    text-align: left;
+  }
+
+  .headline {
+    font-size: 3.2rem; /* Larger headline */
+  }
+
+  .subheadline {
+    font-size: 1.15rem;
+    margin-left: 0; /* Align left */
+    margin-right: 0;
+  }
+
+  .ctaContainer {
+    flex-direction: row; /* Align button and text horizontally */
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start; /* Align left */
+  }
+
+  .imageWrapper {
+     /* Image takes its grid space */
+  }
+}
+
+/* Larger Desktops */
+@media (min-width: 1024px) {
+    .headline {
+        font-size: 3.5rem;
+    }
+    .container {
+        gap: 5rem;
+    }
+}

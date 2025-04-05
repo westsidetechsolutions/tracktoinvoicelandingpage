@@ -1,0 +1,98 @@
+.featuresSection {
+  background-color: var(--color-base-bg); /* Soft white background */
+  overflow: hidden;
+}
+
+.container {
+  /* Uses global container styles */
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: var(--color-neutral);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 1.5rem; /* Gap between cards */
+}
+
+.featureCard {
+  background-color: var(--color-white); /* White card background */
+  padding: 2rem;
+  border-radius: 12px; /* Rounded corners */
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04); /* Subtle shadow */
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* For non-motion fallback/preference */
+  /* Framer Motion handles hover scale/shadow */
+}
+
+/* Remove hover effect if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .featureCard:hover {
+    transform: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.iconWrapper {
+  display: inline-flex; /* Allows centering */
+  background-color: rgba(59, 130, 246, 0.1); /* Light primary background */
+  color: var(--color-primary);
+  padding: 1rem;
+  border-radius: 50%; /* Circular background */
+  margin-bottom: 1.5rem;
+}
+
+.featureIcon {
+  font-size: 1.75rem; /* Icon size */
+  width: 28px; /* Ensure consistent icon sizing */
+  height: 28px;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-neutral);
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 2rem;
+  }
+
+  .featureCard {
+    padding: 2.5rem;
+    text-align: left; /* Align text left on cards */
+  }
+
+  .iconWrapper {
+    /* Keep centered or align left as desired */
+     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+    .featuresGrid {
+        gap: 2.5rem;
+    }
+}

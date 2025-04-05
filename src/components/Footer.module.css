@@ -1,0 +1,100 @@
+.footer {
+  background-color: var(--color-white); /* Or a slightly off-white like base-bg */
+  border-top: 1px solid var(--color-border);
+  padding: 3rem 0 2rem; /* More padding top, less bottom */
+  color: var(--color-secondary);
+}
+
+.container {
+  /* Uses global container styles */
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem; /* Space between top section and links */
+  margin-bottom: 2rem; /* Space before copyright */
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  text-decoration: none;
+  margin-bottom: 0.5rem; /* Space below logo */
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-neutral);
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin: 0; /* Reset default paragraph margin */
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+  justify-content: center;
+  gap: 1rem 1.5rem; /* Row and column gap */
+}
+
+.footerLink {
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.footerBottom {
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem; /* Ensure separation if links are absent */
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .footerContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    text-align: left;
+    gap: 3rem;
+  }
+
+  .footerTop {
+    align-items: flex-start; /* Align logo/tagline left */
+  }
+
+  .footerLinks {
+    justify-content: flex-end; /* Align links to the right */
+    gap: 1.5rem 2rem;
+  }
+
+  .footerBottom {
+    margin-top: 2rem; /* More space on desktop */
+    padding-top: 2rem;
+  }
+}
