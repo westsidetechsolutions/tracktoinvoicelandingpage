@@ -11,8 +11,6 @@
   grid-template-columns: 1fr; /* Single column on mobile */
   gap: 3rem; /* Space between text and image */
   align-items: center;
-  width: 100%; /* Ensure container takes full width */
-  max-width: 100%; /* Prevent overflow */
 }
 
 .contentWrapper {
@@ -87,14 +85,13 @@
 /* Tablet and Desktop */
 @media (min-width: 768px) {
   .heroSection {
-    padding-top: 10rem; /* More padding on larger screens */
+    padding-top: 10rem;
     padding-bottom: 6rem;
   }
 
   .container {
-    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    text-align: left; /* Align text left */
   }
 
   .contentWrapper {
@@ -125,10 +122,14 @@
 
 /* Larger Desktops */
 @media (min-width: 1024px) {
-    .headline {
-        font-size: 3.5rem;
-    }
-    .container {
-        gap: 5rem;
-    }
+  .container {
+    gap: 5rem;
+  }
+}
+
+/* Extra Large Desktops */
+@media (min-width: 1280px) {
+  .container {
+    gap: 6rem; /* Slightly larger gap for very wide screens */
+  }
 }
