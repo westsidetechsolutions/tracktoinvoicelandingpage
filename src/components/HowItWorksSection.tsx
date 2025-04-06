@@ -27,21 +27,21 @@ const HowItWorksSection = () => {
   const steps = [
     {
       id: 1,
-      title: 'Upload your time-tracking CSV',
-      description: 'Export your hours from Everhour, Toggl, or Clockify — we handle the rest.',
-      // icon: faUpload // Example if using FontAwesome
+      title: 'Drag & Drop Your Time-Tracking CSV',
+      description: 'Export from Everhour, Toggl, or Clockify—just upload the file and we handle the rest.',
+      // Icon (existing): Hand dragging CSV file into a dropzone.
     },
     {
       id: 2,
-      title: 'Select your client & review',
-      description: 'We\'ll auto-fill your invoice(s) with hours, rates, and a clean summary email.',
-      // icon: faFileInvoiceDollar
+      title: 'Automatically Match Clients & Review',
+      description: 'TrackToInvoice smartly matches hours to clients and projects. Confirm details at a glance.',
+      // Icon (existing): Invoice preview with editable client, hours, rates fields.
     },
     {
       id: 3,
-      title: 'Send your invoice with one click',
-      description: 'Your client gets a branded PDF and optional weekly summary. You\'re done.',
-      // icon: faPaperPlane
+      title: 'Send Professional Invoices with One Click',
+      description: 'Clients receive your branded invoice and a clear summary email instantly—payment made easy.',
+      // Icon (existing): Envelope/paper plane with green checkmark.
     },
   ];
 
@@ -56,7 +56,7 @@ const HowItWorksSection = () => {
     >
       <div className={`${styles.container} container`}>
         <div className={styles.textContainer}>
-            <h2 className={styles.sectionTitle}>How It Works</h2>
+            <h2 className={styles.sectionTitle}>Invoice Automation in Just 3 Steps</h2>
             <div className={styles.stepsGrid}>
             {steps.map((step, index) => (
                 <motion.div key={step.id} className={styles.stepItem} variants={itemVariants}>

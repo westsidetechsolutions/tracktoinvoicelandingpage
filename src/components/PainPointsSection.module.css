@@ -1,0 +1,100 @@
+/* PainPointsSection specific styles */
+.painPointsSection {
+  background-color: var(--color-background-light); /* Or another suitable background */
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.contentWrapper {
+  max-width: 600px; /* Limit text width */
+  text-align: center; /* Center text initially */
+}
+
+.sectionTitle {
+  font-size: var(--font-size-h2);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.subheadline {
+  font-size: var(--font-size-large);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg) 0;
+  text-align: center; /* Center on mobile */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.bulletList li {
+  font-size: var(--font-size-medium);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  display: inline-flex; /* Changed to inline-flex for better centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally on mobile */
+  gap: var(--space-xs);
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 500px; /* Control max image size */
+  margin: 0 auto; /* Center image */
+}
+
+.painImage {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Desktop layout adjustments */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .contentWrapper {
+    flex: 1; /* Take available space */
+    max-width: 50%; /* Adjust width */
+    text-align: left; /* Align text left on desktop */
+  }
+
+  .imageWrapper {
+    flex: 1; /* Take available space */
+    max-width: 45%; /* Adjust width */
+    margin: 0; /* Reset margin */
+  }
+
+  /* Order: Text on left, Image on right (default) */
+  /* If image needs to be on left:
+  .contentWrapper { order: 2; }
+  .imageWrapper { order: 1; }
+  */
+
+  .bulletList {
+    text-align: left; /* Align left on desktop */
+  }
+
+  .bulletList li {
+    justify-content: flex-start; /* Align left on desktop */
+  }
+}

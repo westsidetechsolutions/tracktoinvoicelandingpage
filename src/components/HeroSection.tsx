@@ -29,10 +29,10 @@ const HeroSection = () => {
       <div className={`${styles.container} container`}>
         <div className={styles.contentWrapper}>
           <h1 className={styles.headline}>
-            Turn Your Tracked Hours Into Invoices in Seconds
+            Turn Your Billable Hours Into Professional Invoices Instantly
           </h1>
           <p className={styles.subheadline}>
-            TrackToInvoice lets freelancers upload time logs and instantly generate branded invoices — with zero setup and no messy spreadsheets.
+            TrackToInvoice instantly converts your time logs into accurate, branded invoices, eliminating manual copying, reducing errors, and getting you paid faster.
           </p>
           <div className={styles.ctaContainer}>
             <motion.button
@@ -45,7 +45,7 @@ const HeroSection = () => {
             >
               Join the Waitlist
             </motion.button>
-            <p className={styles.ctaSubtext}>Get early access!</p>
+            <p className={styles.ctaSubtext}>Early access + exclusive launch discount!</p>
           </div>
         </div>
         <motion.div

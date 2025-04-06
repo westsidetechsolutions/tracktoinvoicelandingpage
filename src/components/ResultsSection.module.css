@@ -1,0 +1,68 @@
+/* ResultsSection specific styles */
+.resultsSection {
+  background-color: var(--color-background); /* Or another suitable background */
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.contentWrapper {
+  max-width: 600px; /* Limit text width */
+  text-align: center; /* Center text initially */
+}
+
+.sectionTitle {
+  font-size: var(--font-size-h2);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.subheadline {
+  font-size: var(--font-size-large);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 500px; /* Control max image size */
+  margin: 0 auto; /* Center image */
+}
+
+.resultsImage {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Desktop layout adjustments */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .contentWrapper {
+    flex: 1; /* Take available space */
+    max-width: 50%; /* Adjust width */
+    text-align: left; /* Align text left on desktop */
+    order: 1; /* Text on the left */
+  }
+
+  .imageWrapper {
+    flex: 1; /* Take available space */
+    max-width: 45%; /* Adjust width */
+    margin: 0; /* Reset margin */
+    order: 2; /* Image on the right */
+  }
+}

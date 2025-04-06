@@ -61,9 +61,9 @@ const WaitlistCTASection = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <div className={`${styles.container} container`}>
-        <h2 className={styles.headline}>Be the First to Try TrackToInvoice</h2>
+        <h2 className={styles.headline}>Ready to Stop Wasting Hours on Invoices?</h2>
         <p className={styles.subheadline}>
-          Join our waitlist and get early access + an exclusive deal when we launch.
+          Join our early-access waitlist today and claim your exclusive launch discount!
         </p>
 
         {!isSubmitted ? (
@@ -109,7 +109,7 @@ const WaitlistCTASection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
           >
-            🎉 You&apos;re on the list! We&apos;ll email you when we launch.
+            🎉 You’re officially on the waitlist! Check your inbox—we’ll reach out when we launch.
           </motion.div>
         )}
       </div>

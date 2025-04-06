@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBolt, faEnvelopeOpenText, faUsersCog } from '@fortawesome/free-solid-svg-icons'; // Example icons
+// Removed FontAwesome imports as emojis will be used in titles
 import styles from './FeatureHighlightsSection.module.css';
 
 const FeatureHighlightsSection = () => {
@@ -19,19 +18,19 @@ const FeatureHighlightsSection = () => {
 
   const features = [
     {
-      icon: faBolt,
-      title: 'Instant Invoices from Time Logs',
-      description: 'Automatically convert your tracked time into branded invoices — no copy/paste needed.',
+      // icon: faUsersCog, // Replaced with emoji in title
+      title: '🧠 Smart Client & Project Matching',
+      description: 'Never manually match hours again. We automatically detect and organize your tracked hours by client, project, hourly rates, retainers, and notes.',
     },
     {
-      icon: faEnvelopeOpenText,
-      title: 'Pre-Written Emails & Auto-Send',
-      description: 'Send invoices with auto-generated summaries and subject lines. Or schedule them weekly.',
+      // icon: faBolt, // Replaced with emoji in title
+      title: '📥 Instant, Professional, Branded Invoices',
+      description: 'Impress clients with clean, branded invoices—without touching a spreadsheet.',
     },
     {
-      icon: faUsersCog, // Example icon for client/project matching
-      title: 'Client & Project Matching',
-      description: 'Smartly detect which hours belong to which client. Supports hourly rates, retainers, and notes.',
+      // icon: faEnvelopeOpenText, // Replaced with emoji in title
+      title: '📧 Pre-Written Emails & Automatic Delivery',
+      description: 'Save time and hassle. Send auto-generated invoice summaries instantly or schedule weekly invoicing in seconds.',
     },
   ];
 
@@ -45,7 +44,7 @@ const FeatureHighlightsSection = () => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className={`${styles.container} container`}>
-        <h2 className={styles.sectionTitle}>Designed for Freelancers. Built for Speed.</h2>
+        <h2 className={styles.sectionTitle}>Built Specifically for Busy Freelancers & Consultants</h2>
         <div className={styles.featuresGrid}>
           {features.map((feature, index) => (
             <motion.div
@@ -55,9 +54,7 @@ const FeatureHighlightsSection = () => {
               whileHover={{ scale: 1.03, boxShadow: '0 8px 20px rgba(0, 0, 0, 0.08)' }} // Hover effect
               transition={{ duration: 0.2 }} // Smooth hover transition
             >
-              <div className={styles.iconWrapper}>
-                <FontAwesomeIcon icon={feature.icon} className={styles.featureIcon} />
-              </div>
+              {/* Removed icon wrapper - emoji is in the title */}
               <h3 className={styles.featureTitle}>{feature.title}</h3>
               <p className={styles.featureDescription}>{feature.description}</p>
             </motion.div>
