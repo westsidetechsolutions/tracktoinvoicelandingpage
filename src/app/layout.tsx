@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import Script from 'next/script'
 config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 const inter = Inter({
@@ -38,6 +39,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-5DSZ1KCTZ0`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5DSZ1KCTZ0');
+          `}
+        </Script>
+      </head>
       <body className="antialiased">
         {children}
       </body>
