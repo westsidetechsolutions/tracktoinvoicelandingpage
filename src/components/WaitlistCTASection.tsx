@@ -61,9 +61,9 @@ const WaitlistCTASection = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <div className={`${styles.container} container`}>
-        <h2 className={styles.headline}>Ready to Stop Wasting Hours on Invoices?</h2>
+        <h2 className={styles.headline}>Try It Free. Save Time Every Week.</h2>
         <p className={styles.subheadline}>
-          Join our early-access waitlist today and claim your exclusive launch discount!
+          Join our waitlist and get early access + a launch-day bonus.
         </p>
 
         {!isSubmitted ? (
@@ -109,7 +109,7 @@ const WaitlistCTASection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
           >
-            🎉 You’re officially on the waitlist! Check your inbox—we’ll reach out when we launch.
+            🎉 You're on the list! We’ll email you when we launch.
           </motion.div>
         )}
       </div>

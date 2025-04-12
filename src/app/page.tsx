@@ -9,6 +9,8 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import FeatureHighlightsSection from '@/components/FeatureHighlightsSection';
 import InvoicePreviewSection from '@/components/InvoicePreviewSection';
 import ResultsSection from '@/components/ResultsSection'; // Added import
+import WhoItsForSection from '@/components/WhoItsForSection'; // Added import
+import FAQSection from '@/components/FAQSection'; // Added import
 import WaitlistCTASection from '@/components/WaitlistCTASection';
 
 export default function Home() {
@@ -22,6 +24,8 @@ export default function Home() {
         <FeatureHighlightsSection />
         <InvoicePreviewSection />
         <ResultsSection /> {/* Added new section */}
+        <WhoItsForSection /> {/* Added new section */}
+        <FAQSection /> {/* Added new section */}
         <WaitlistCTASection />
       </main>
       <Footer />

@@ -33,22 +33,11 @@ const PainPointsSection = () => {
     >
       <div className={`${styles.container} container`}>
         <div className={styles.contentWrapper}>
-          <h2 className={styles.sectionTitle}>Does Creating Invoices Eat Up Your Time?</h2>
+          <h2 className={styles.sectionTitle}>Tired of Manually Creating Invoices Every Week?</h2>
           <p className={styles.subheadline}>
-            Manual invoicing is slow, error-prone, and tedious. You should spend your time doing billable work—not juggling spreadsheets.
+            You're juggling spreadsheets, chasing formatting, and rewriting the same email over and over. It's tedious, error-prone, and takes time away from paid work.
           </p>
-          <br />
-          <motion.ul className={styles.bulletList}>
-            <motion.li variants={itemVariants}>
-              ⏳ Hours wasted copying hours from Toggl, Everhour, or Clockify.
-            </motion.li>
-            <motion.li variants={itemVariants}>
-              ❌ Errors and typos delaying payments and confusing clients.
-            </motion.li>
-            <motion.li variants={itemVariants}>
-              📧 Manual emails causing slow communication and late payments.
-            </motion.li>
-          </motion.ul>
+          {/* Removed bullet list */}
         </div>
         <motion.div
           className={styles.imageWrapper}

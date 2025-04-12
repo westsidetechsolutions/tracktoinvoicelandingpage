@@ -1,0 +1,86 @@
+.faqSection {
+  background-color: var(--color-background); /* Or choose a suitable background */
+}
+
+.container {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background-color: var(--color-background-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  overflow: hidden; /* Ensures border-radius applies correctly */
+}
+
+.faqQuestion {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* Remove default marker */
+  color: var(--color-text);
+}
+
+.faqQuestion::-webkit-details-marker {
+  display: none; /* Hide default marker in WebKit */
+}
+
+.faqQuestion::after { /* Custom dropdown indicator */
+  content: '+';
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--color-accent);
+  transition: transform 0.2s ease-in-out;
+}
+
+.faqItem[open] > .faqQuestion::after {
+  transform: rotate(45deg);
+}
+
+.faqAnswer {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  padding: 1.5rem 1.5rem 1.25rem 1.5rem;
+  line-height: 1.6;
+  margin: 0; /* Reset default paragraph margin */
+  border-top: 1px solid var(--color-border); /* Separator */
+}
+
+/* Optional: Add hover effect */
+.faqQuestion:hover {
+  background-color: rgba(0, 0, 0, 0.02); /* Subtle hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: var(--font-size-lg);
+    margin-bottom: 2rem;
+  }
+  .faqQuestion {
+    font-size: var(--font-size-md);
+    padding: 1rem 1.25rem;
+  }
+  .faqAnswer {
+    font-size: var(--font-size-sm);
+    padding: 0 1.25rem 1rem 1.25rem;
+  }
+}

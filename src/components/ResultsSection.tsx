@@ -28,9 +28,9 @@ const ResultsSection = () => {
     >
       <div className={`${styles.container} container`}>
         <div className={styles.contentWrapper}>
-          <h2 className={styles.sectionTitle}>Spend Less Time Invoicing. More Time Earning.</h2>
+          <h2 className={styles.sectionTitle}>From Hours to Minutes</h2>
           <p className={styles.subheadline}>
-            TrackToInvoice cuts your invoicing time by 90%, reduces payment delays, and helps you look more professional in front of your clients—so you can focus on growing your freelance business.
+            See how much time you’re saving by ditching the manual approach.
           </p>
         </div>
         <motion.div

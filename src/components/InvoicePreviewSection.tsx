@@ -27,9 +27,9 @@ const InvoicePreviewSection = () => {
     >
       <div className={`${styles.container} container`}>
         <div className={styles.textWrapper}>
-          <h2 className={styles.sectionTitle}>Beautiful Invoices That Reflect Your Brand</h2>
+          <h2 className={styles.sectionTitle}>Look Professional, Effortlessly</h2>
           <p className={styles.subheadline}>
-            Personalize your invoice template, add your logo, and send impressive, clear, professional invoices your clients can easily pay.
+            Customize your invoice with your logo and brand colors. We’ll handle the formatting and calculations.
           </p>
         </div>
         <motion.div

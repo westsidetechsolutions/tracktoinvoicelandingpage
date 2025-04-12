@@ -18,19 +18,19 @@ const FeatureHighlightsSection = () => {
 
   const features = [
     {
-      // icon: faUsersCog, // Replaced with emoji in title
-      title: '🧠 Smart Client & Project Matching',
-      description: 'Never manually match hours again. We automatically detect and organize your tracked hours by client, project, hourly rates, retainers, and notes.',
+      // icon: faBolt, // Using emoji in title
+      title: '⚡ Instant Invoice Generation',
+      description: 'Upload and invoice in under 2 minutes.',
     },
     {
-      // icon: faBolt, // Replaced with emoji in title
-      title: '📥 Instant, Professional, Branded Invoices',
-      description: 'Impress clients with clean, branded invoices—without touching a spreadsheet.',
+      // icon: faEnvelopeOpenText, // Using emoji in title
+      title: '✉️ Smart Emails + Auto-Send',
+      description: 'Never write "please see attached" again.',
     },
     {
-      // icon: faEnvelopeOpenText, // Replaced with emoji in title
-      title: '📧 Pre-Written Emails & Automatic Delivery',
-      description: 'Save time and hassle. Send auto-generated invoice summaries instantly or schedule weekly invoicing in seconds.',
+      // icon: faUsersCog, // Using emoji in title
+      title: '🧠 Client & Project Matching',
+      description: 'Automatically applies rates, project labels, and invoice numbers.',
     },
   ];
 
@@ -44,7 +44,7 @@ const FeatureHighlightsSection = () => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className={`${styles.container} container`}>
-        <h2 className={styles.sectionTitle}>Built Specifically for Busy Freelancers & Consultants</h2>
+        <h2 className={styles.sectionTitle}>Built for Freelancers. Optimized for Speed.</h2>
         <div className={styles.featuresGrid}>
           {features.map((feature, index) => (
             <motion.div

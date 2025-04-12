@@ -27,20 +27,21 @@ const HowItWorksSection = () => {
   const steps = [
     {
       id: 1,
-      title: 'Drag & Drop Your Time-Tracking CSV',
-      description: 'Export from Everhour, Toggl, or Clockify—just upload the file and we handle the rest.',
+      // title: 'Drag & Drop Your Time-Tracking CSV', // Removed duplicate
+      title: 'Upload your time-tracking CSV',
+      description: 'Export from Everhour, Toggl, or Clockify — we support them all.',
       // Icon (existing): Hand dragging CSV file into a dropzone.
     },
     {
       id: 2,
-      title: 'Automatically Match Clients & Review',
-      description: 'TrackToInvoice smartly matches hours to clients and projects. Confirm details at a glance.',
+      title: 'Auto-match clients & preview',
+      description: 'We detect your clients and calculate hours + totals for you.',
       // Icon (existing): Invoice preview with editable client, hours, rates fields.
     },
     {
       id: 3,
-      title: 'Send Professional Invoices with One Click',
-      description: 'Clients receive your branded invoice and a clear summary email instantly—payment made easy.',
+      title: 'Send it with one click',
+      description: 'Get a branded PDF invoice and pre-written email ready to go.',
       // Icon (existing): Envelope/paper plane with green checkmark.
     },
   ];
@@ -56,7 +57,7 @@ const HowItWorksSection = () => {
     >
       <div className={`${styles.container} container`}>
         <div className={styles.textContainer}>
-            <h2 className={styles.sectionTitle}>Invoice Automation in Just 3 Steps</h2>
+            <h2 className={styles.sectionTitle}>TrackToInvoice Does It For You</h2>
             <div className={styles.stepsGrid}>
             {steps.map((step, index) => (
                 <motion.div key={step.id} className={styles.stepItem} variants={itemVariants}>
