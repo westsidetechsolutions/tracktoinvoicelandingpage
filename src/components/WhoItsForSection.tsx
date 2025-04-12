@@ -41,7 +41,7 @@ const WhoItsForSection = () => {
           ))}
         </ul>
         <p className={styles.subheadline}>
-          If you're billing clients based on tracked time, TrackToInvoice was built for you.
+          If you&apos;re billing clients based on tracked time, TrackToInvoice was built for you.
         </p>
       </div>
     </motion.section>

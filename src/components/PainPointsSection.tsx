@@ -12,11 +12,6 @@ const PainPointsSection = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-  };
-
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.6, delay: 0.2, ease: 'easeOut' } },
@@ -35,7 +30,7 @@ const PainPointsSection = () => {
         <div className={styles.contentWrapper}>
           <h2 className={styles.sectionTitle}>Tired of Manually Creating Invoices Every Week?</h2>
           <p className={styles.subheadline}>
-            You're juggling spreadsheets, chasing formatting, and rewriting the same email over and over. It's tedious, error-prone, and takes time away from paid work.
+            You&apos;re juggling spreadsheets, chasing formatting, and rewriting the same email over and over. It&apos;s tedious, error-prone, and takes time away from paid work.
           </p>
           {/* Removed bullet list */}
         </div>

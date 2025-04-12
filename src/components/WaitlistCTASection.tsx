@@ -109,7 +109,7 @@ const WaitlistCTASection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
           >
-            🎉 You're on the list! We’ll email you when we launch.
+            🎉 You&apos;re on the list! We&apos;ll email you when we launch.
           </motion.div>
         )}
       </div>
